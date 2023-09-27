@@ -1,0 +1,33 @@
+{
+  "name": "@bomgar/public-portal-js",
+  "description": "",
+  "scripts": {
+    "build": "node build.js",
+    "sync": "bg-web-sync --public-site --no-watch ../../../../../..",
+    "sync-watch": "bg-web-sync --public-site --watch ../../../../../..",
+    "test": "playwright test --browser all tests/*.spec.ts",
+    "test-chrome": "npm run test-chromium",
+    "test-chromium": "playwright test --browser chromium tests/*.spec.ts",
+    "test-firefox": "playwright test --browser firefox tests/*.spec.ts",
+    "test-webkit": "playwright test --browser webkit tests/*.spec.ts",
+    "test-safari": "npm run test-webkit"
+  },
+  "author": "BeyondTrust Corporation",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@bomgar/typescript-utils": "git+ssh://git@git.bt3ng.com:7999/try/typescript-utils.git#bb0738b866684fb9936f7308649aa653ee8e0458",
+    "esbuild": "~0.14.34",
+    "tslib": "~2.2.0"
+  },
+  "devDependencies": {
+    "@bomgar/bg-web-sync": "git+ssh://git@git.bt3ng.com:7999/~bsimpson/web-watch-sync.git#480b550f03a429c0927dd592c3fc9488c2a2e87b",
+    "@playwright/test": "^1.25.0",
+    "@types/node": "~18.11.11",
+    "@typescript-eslint/eslint-plugin": "~5.36.2",
+    "@typescript-eslint/parser": "~5.36.2",
+    "eslint": "~8.22.0",
+    "ts-node": "~10.7.0",
+    "typescript": "~4.6.3"
+  }
+}
